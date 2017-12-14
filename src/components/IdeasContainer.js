@@ -9,6 +9,13 @@ class IdeasContainer extends React.Component {
         }
     }
 
+    componentDidMount() {
+        // this is how we're going to get our ideas from/through api
+
+        // use JS lib axios
+
+    }
+
     render() {
         return (
             <div className="">
