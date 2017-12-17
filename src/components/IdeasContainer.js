@@ -12,8 +12,6 @@ class IdeasContainer extends React.Component {
 
     componentDidMount() {
         // this is how we're going to get our ideas from/through api
-
-        // use JS lib axios
         axios.get('http://localhost:3001/api/v1/ideas.json')
         .then(response => {
             console.log(response)
@@ -24,9 +22,8 @@ class IdeasContainer extends React.Component {
 
     render() {
         return (
-            <div className="">
-                Ideas (woohoo from the IdeasContainer)
-
+            <div>
+                {}
             </div>
         );
     }
