@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'   // axios lib
-import Idea from './Idea'
+import {Idea} from './Idea'
 
 class IdeasContainer extends React.Component {
     // need to give state to prepare for api
