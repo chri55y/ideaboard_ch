@@ -15,7 +15,7 @@ class IdeasContainer extends React.Component {
         // this is how we're going to get our ideas from/through api
         axios.get('http://localhost:3001/api/v1/ideas.json')
         .then(response => {
-            console.log(response)
+            // console.log(response)
             this.setState({ ideas: response.data })
         })
         .catch(error => console.log(error))
@@ -24,6 +24,12 @@ class IdeasContainer extends React.Component {
     render() {
         return (
             <div>
+                <div>
+                    <button className="newIdeaButton">
+                        Add New Idea
+                    </button>
+                </div>
+
                 {this.state.ideas.map((idea) => {
                     return (
                         <Idea idea={idea} key={idea.id} />
