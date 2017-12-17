@@ -32,7 +32,7 @@ class IdeasContainer extends React.Component {
 
                 {this.state.ideas.map((idea) => {
                     return (
-                        <Idea idea={idea} key={idea.id} />
+                        <Idea {...idea} key={idea.id} />
                         )
                     })
                 }
