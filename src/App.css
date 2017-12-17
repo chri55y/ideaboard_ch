@@ -9,12 +9,21 @@
   /*color: white;*/
 }
 
-.App-title {
-  font-size: 1.5em;
-}
+/*.App-title {*/
+  /*font-size: 1.5em;*/
+/*}*/
 
 .App-intro {
   font-size: large;
 }
 
 
+.tile {
+  height:     150px;
+  width:      150px;
+  margin:     10px;
+  background: lightyellow;
+  float:      left;
+  font-size:  11px;
+  text-align: left;
+}
