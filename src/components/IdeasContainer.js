@@ -25,7 +25,7 @@ class IdeasContainer extends React.Component {
     render() {
         return (
             <div className="">
-                Ideas (woohoo)
+                Ideas (woohoo from the IdeasContainer)
 
             </div>
         );
