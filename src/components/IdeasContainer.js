@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'   // axios lib
 import {Idea} from './Idea'
+import update from 'immutability-helper'    // added via command:
+                                            // yarn add immutability-helper
 
 class IdeasContainer extends React.Component {
     // need to give state to prepare for api
@@ -30,7 +32,8 @@ class IdeasContainer extends React.Component {
         axios.post('http://localhost:3001/api/v1/ideas', {idea: {title: '', body: ''}})
             .then(response => {
                 console.log(response)
-                // this.setState({ ideas: response.data })
+                const ideas = update(this.state.ideas, { $splice: [[0, 0, response.data]] })
+                this.setState({ideas: ideas})
             })
             .catch(error => console.log(error))
     }
