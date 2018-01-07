@@ -9,7 +9,8 @@ class IdeasContainer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            ideas:  []
+            ideas:  [],
+            editingIdeaId: null
         }
     }
 
@@ -18,7 +19,8 @@ class IdeasContainer extends React.Component {
         axios.get('http://localhost:3001/api/v1/ideas.json')
             .then(response => {
                 // console.log(response)
-                this.setState({ ideas: response.data })
+                this.setState({ ideas: response.data,
+                                editingIdeaId: response.data.id })
             })
             .catch(error => console.log(error))
     }
